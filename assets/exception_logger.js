@@ -4,7 +4,7 @@ ExceptionLogger = {
     $('page').value = num;
     $('query-form').onsubmit();
   },
-  
+
   setFilter: function(context, name) {
     var filterName = context + '_filter'
     $(filterName).value = ($F(filterName) == name) ? '' : name;
@@ -19,7 +19,7 @@ ExceptionLogger = {
       a.className = (value && (a.getAttribute('title') == value || a.innerHTML == value)) ? 'selected' : '';
     });
   },
-  
+
   deleteAll: function() {
     return Form.serialize('query-form') + '&' + $$('tr.exception').collect(function(tr) { return tr.getAttribute('id').gsub(/^\w+-/, ''); }).toQueryString('ids');
   }

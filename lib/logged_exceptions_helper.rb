@@ -4,7 +4,7 @@ module LoggedExceptionsHelper
   end
 
   def pagination_remote_links(collection)
-    will_paginate collection, 
+    will_paginate collection,
       :renderer   => 'LoggedExceptionsHelper::PaginationRenderer',
       :prev_label => '',
       :next_label => '',
